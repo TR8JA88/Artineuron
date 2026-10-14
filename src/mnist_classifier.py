@@ -52,5 +52,32 @@ class NeuralNetwork(nn.Module):
 
 # 4. Create the model
 model = NeuralNetwork()
+loss_function = nn.CrossEntropyLoss()
+
+optimizer = torch.optim.SGD(
+    model.parameters(),
+    lr=0.1
+)
+
+epochs = 5
+
+for epoch in range(epochs):
+
+    for images, labels in train_loader:
+
+        # Forward pass
+        predictions = model(images)
+
+        # Calculate loss
+        loss = loss_function(predictions, labels)
+
+        # Calculate gradients
+        optimizer.zero_grad()
+        loss.backward()
+
+        # Update weights
+        optimizer.step()
+
+    print(f"Epoch {epoch + 1}: loss = {loss.item():.4f}")
 
 print(model)

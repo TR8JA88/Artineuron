@@ -14,4 +14,13 @@ Weights are adjustable paramters that indicate how signfiicantly an element cont
 Checkpoint 6 
 As  I also cover matrices in FM I am beginning to see matrices as tranfomrations, a type of function that takes in a particular sized matrix and outputs another.
 # How does the newtwork learn 
-Cross entropy loss 
+Cross entropy loss .. what really is it not simply the model assigning a higher probability to the correct class.
+First results training ; 
+
+Epoch 1: loss = 0.2523
+Epoch 2: loss = 0.1512
+Epoch 3: loss = 0.1434
+Epoch 4: loss = 0.0504
+Epoch 5: loss = 0.0505
+
+Define an epoch ...
